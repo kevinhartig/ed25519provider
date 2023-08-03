@@ -1,0 +1,14 @@
+# Load post model (using streamID)
+type Post @loadModel(id: "$POST_ID"){
+    id: ID!
+}
+
+# New comment model
+# Set relationship to original post
+# Enable querying comment to get original post
+
+type Comment @createModel(accountRelation: LIST, description: "A comment on a Post") {
+  postID: StreamID! @documentReference(model: "Post")
+  post: Post! @relationDocument(property: "postID")
+  text: String! @string(maxLength: 500)
+}

@@ -1,0 +1,4 @@
+type Post @createModel(accountRelation: LIST, description: "A  Post") {
+  author: DID! @documentAccount
+  text: String! @string(maxLength: 10000)
+}

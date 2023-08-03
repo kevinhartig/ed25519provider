@@ -3,23 +3,33 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@ceramicnetwork/http-client": "^2.26.0",
+    "@composedb/client": "^0.4.4",
+    "@composedb/devtools": "^0.4.4",
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
     "dids": "^4.0.3",
     "key-did-provider-ed25519": "^3.0.1",
     "key-did-resolver": "^3.0.0",
+    "ora": "^7.0.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-scripts": "5.0.1",
     "seedrandom": "^3.0.5",
+    "uint8arrays": "^4.0.4",
     "web-vitals": "^2.1.4"
+  },
+  "devDependencies": {
+    "@composedb/devtools-node": "0.4.4"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "ceramic": "ceramic daemon --config=config/daemon.config.json",
+    "run": "node scripts/run.mjs"
   },
   "eslintConfig": {
     "extends": [
